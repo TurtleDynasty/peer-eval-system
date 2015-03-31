@@ -6,12 +6,14 @@ List of things that need to be done
  * admin can list users
  * admin can make project
  * admin can make project eval
+
 ##Features to implement
  * usertyping (Employee, Supervisor, Admin)
  * password protection
  * project entity
  * evaluation entity
  * generic passing funcion
+
 ##Functions to implement
  * login
  * generic passing function
@@ -22,8 +24,11 @@ List of things that need to be done
    ** supervisor create project eval
    ** employee complete project eval
  * logout
+
  ##UI
-  * generic 
+  * generic templating
+
 ##Database
  * make tables - using MySQL in phpMyAdmin with XAMPP
  * insert test data
+
