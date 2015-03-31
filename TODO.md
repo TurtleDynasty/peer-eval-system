@@ -17,12 +17,12 @@ List of things that need to be done
 ##Functions to implement
  * login
  * generic passing function
-   ** admin create user
-   ** admin create project
-   ** admin create project eval
-   ** supervisor create project
-   ** supervisor create project eval
-   ** employee complete project eval
+   * admin create user
+   * admin create project
+   * admin create project eval
+   * supervisor create project
+   * supervisor create project eval
+   * employee complete project eval
  * logout
 
  ##UI
