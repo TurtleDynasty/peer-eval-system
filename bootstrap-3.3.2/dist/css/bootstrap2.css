@@ -1,0 +1,18 @@
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.list-group2 {
+  padding-right: 112px;
+  padding-left: 112px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.list-group3 {
+  padding-right: 112px;
+  padding-left: 112px;
+}
