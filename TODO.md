@@ -32,3 +32,16 @@ List of things that need to be done
  * ~~make tables - using MySQL in phpMyAdmin with XAMPP~~ 
  * insert more test data
 
+##Automated Tests
+ * Tests contain description of test scenario, prerequisites (if any) to run the test, steps to perform the test, sucess criteria
+ * Pick 5 of these to implement
+   * Log in as user when user does not exist
+   * Log in as admin
+   * Create a supervisor as an admin
+   * Create an employee as an admin
+   * Create a project as an admin
+   * Create a project evaluation as an admin
+   * Create a project evaluation as a supervisor
+   * Submit a project evaluation as an employee
+   * Create an evaluation
+
