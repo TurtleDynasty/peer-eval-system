@@ -15,8 +15,8 @@ List of things that need to be done
  * generic passing funcion
 
 ##Functions to implement
- * login
- * generic passing function
+ * login - Fellipe
+ * generic passing function - David
    * admin create user
    * admin create project
    * admin create project eval
@@ -26,9 +26,9 @@ List of things that need to be done
  * logout
 
  ##UI
-  * generic templating
+  * clean up code and addign ids, make forms - David
 
 ##Database
- * make tables - using MySQL in phpMyAdmin with XAMPP
- * insert test data
+ * ~~make tables - using MySQL in phpMyAdmin with XAMPP~~ 
+ * insert more test data
 
