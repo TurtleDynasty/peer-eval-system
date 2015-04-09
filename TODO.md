@@ -43,5 +43,4 @@ List of things that need to be done
    * Create a project evaluation as an admin
    * Create a project evaluation as a supervisor
    * Submit a project evaluation as an employee
-   * Create an evaluation
 
