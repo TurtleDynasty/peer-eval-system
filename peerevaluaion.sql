@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2015 at 12:57 AM
+-- Generation Time: Apr 12, 2015 at 04:45 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -31,17 +31,19 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `Name` varchar(50) DEFAULT NULL,
   `Username` varchar(20) NOT NULL,
   `Password` varchar(50) NOT NULL,
-  `Position` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `Position` varchar(10) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`ID`, `Name`, `Username`, `Password`, `Position`) VALUES
-(1, 'Luke Sanchez', 'luke', 'test', 'admin'),
-(2, 'Fellipe Gurgel', 'fellipe', 'test', 'supervisor'),
-(3, 'David Miller', 'david', 'test', 'employee');
+INSERT INTO `employee` (`ID`, `Name`, `Username`, `Password`, `Position`, `Email`) VALUES
+(1, 'Luke Sanchez', 'luke', 'test', 'admin', NULL),
+(2, 'Fellipe Gurgel', 'fellipe', 'test', 'supervisor', NULL),
+(3, 'David Miller', 'david', 'test', 'employee', NULL),
+(4, 'Adam TA', 'adam', 'test', 'employee', 'faa227@nau.edu');
 
 -- --------------------------------------------------------
 
@@ -75,17 +77,20 @@ INSERT INTO `evaluation` (`Score1`, `Score2`, `Score3`, `Notes`, `ProjectID`, `E
 CREATE TABLE IF NOT EXISTS `project` (
 `ID` int(10) NOT NULL,
   `Name` varchar(50) DEFAULT NULL,
-  `DueDate` date DEFAULT NULL,
+  `DueDate` varchar(255) DEFAULT NULL,
   `EmployerID` int(10) NOT NULL,
   `Status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `project`
 --
 
 INSERT INTO `project` (`ID`, `Name`, `DueDate`, `EmployerID`, `Status`) VALUES
-(1, 'Peer Evaluation Project ', '2015-04-13', 2, 'open');
+(1, 'Peer Evaluation Project ', '2015-04-13', 2, 'open'),
+(2, 'Internship Project', '2015-04-17', 2, 'open'),
+(3, 'New Application Project', '2015-04-24', 2, 'open'),
+(4, 'Test project', '2015-06-01', 2, 'open');
 
 --
 -- Indexes for dumped tables
@@ -111,12 +116,12 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
