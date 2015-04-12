@@ -25,14 +25,15 @@ List of things that need to be done
    * employee complete project eval
  * logout
  
- ##Next Functions for Fellipe
-  * Logout
-  * Admin -> Editable profiles for projects and accounts
-  * Admin -> Create account -> verify existing usernames
-  * Supervisor -> generate report (only after the projects and evaluations are done)
-
  ##UI
   * clean up code and addign ids, make forms - David
+
+##Next Functions for Fellipe
+ * Logout
+ * Admin -> Editable profiles for projects and accounts
+ * Admin -> Create account -> verify existing usernames
+ * Supervisor -> generate report (only after the projects and evaluations are done)
+
 
 ##Database
  * ~~make tables - using MySQL in phpMyAdmin with XAMPP~~ 
