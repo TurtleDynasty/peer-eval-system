@@ -1,51 +1,3 @@
-<?php
-include 'db.php';
-
-$username = $password = $loginErr = "";
-$connectionSuccess = FALSE; // It only will turn TRUE when everything goes right 
-
-            /* set the variables */
-            $username = $_POST["username"];
-            $password = $_POST["password"];
-
-            
-            $sql = "SELECT * FROM employee WHERE Username ='$username' AND Password ='$password'";
-            $result = mysql_query($sql,$cxn);
-            if($result == FALSE)
-            {
-                $validFlag = FALSE;
-                echo "error here 3";
-            }
-            else
-            {
-                if(mysql_num_rows($result) == 0)
-                {
-                    $loginErr = "Invalid Username or Password.";
-                    $validFlag = FALSE;
-                }
-                else{
-                            /* start a session and save some information */
-                            session_start();
-                            $_SESSION['userid'] = $username;
-                            
-                            /* save the info of the user that just logged in */
-                            $sql = "SELECT * FROM employee WHERE Username = '$username'";
-                            $result = mysql_query($sql);
-                            $row=mysql_fetch_array($result);
-
-                            $_SESSION['Name']=$row['Name'];
-                            $_SESSION['Email']=$row['Email'];
-                            $_SESSION['Position']=$row['Position'];
-                            $position = $row['Position'];
-                            $_SESSION['ID']=$row['ID'];
-                            
-                            
-                            /* TO REPORT SUCCESS */
-                            $connectionSuccess = TRUE;
-                    }
-                }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,32 +47,12 @@ $connectionSuccess = FALSE; // It only will turn TRUE when everything goes right
             
     <!-- /container -->
     <div class="container">
-      <form class="form-signin" action="login.php">
+      <form class="form-signin" action="login.php" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
-          
-          <?php
-                    if (!$connectionSuccess){
-                        echo "<label><font color='red'>
-                            $loginErr
-                            </font></label>";
-                    }
-                    else
-                    {
-                        if ($position == "admin")
-                        {
-                            header("Location: adhome.php");
-                        }
-                        else
-                        {
-                            header("Location: home.php");
-                        }
-                    }
-            ?>
-          
         <label for="inputUser" class="sr-only" width="250">Username</label>
-        <input type="username" id="inputUser" class="form-control" placeholder="Username" required autofocus>
+        <input type="username" id="inputUser" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
